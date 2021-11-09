@@ -1,0 +1,11 @@
+<h1> index page </h1>
+
+<% @tasks.each do |task| %>
+<ul>
+  <li><%= link_to task.title, task_path(task.id) %></li>
+  <li><%= task.details %></li>
+  <li><%= task.completed %></li>
+</ul>
+<% end %>
+
+<%= link_to 'Create New Task', "/tasks/new" %>
